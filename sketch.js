@@ -42,6 +42,9 @@ function draw(){
 background(225)
 Engine.update(engine)
 
+superman.y = World.mouseY;
+superman.x = World.mouseX;
+
 platform.display();
 
 tile.display();
