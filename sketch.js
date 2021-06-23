@@ -18,7 +18,7 @@ platform = new Platform(200,290,900,20)
 
 superman = new Superman(200,200,200,200)
 
-monster = new Monster(900,200,100,100)
+monster = new Monster(900,30,100,100)
 
 tile = new Tile(500,255,50,50)
 tile1 = new Tile(500,215,50,50)
@@ -36,6 +36,8 @@ tile10 = new Tile(600,255,50,50)
 tile11 = new Tile(600,215,50,50)
 tile12 = new Tile(600,175,50,50)
 tile13 = new Tile(600,135,50,50)
+
+launcherObj = new Launcher(superman.body,{x:150,y:100})
 }
 
 function draw(){
@@ -68,4 +70,11 @@ superman.display();
 
 monster.display();
 
+launcherObj.display();
+
 }
+
+function mouseDragged() {
+    Matter.Body.setPosition(superman.body,{x:mouseX,y:mouseY})
+  }
+

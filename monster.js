@@ -2,10 +2,10 @@ class Monster {
 	constructor(x,y,r)
 	{
 		var options={
-			isStatic:true,
+			isStatic:false,
 			restitution:0,
 			friction:1,
-			density:1.2
+			density:1.5
 			}
 		this.x=x;
 		this.y=y;
