@@ -6,7 +6,7 @@ const Constraint = Matter.Constraint;
 var engine, world;
 
 function preload() {
-
+bgImg = loadImage("images/GamingBackground.png")
 }
 
 function setup(){
@@ -14,11 +14,13 @@ var canvas = createCanvas(1200,400);
 engine = Engine.create();
 world = engine.world;
 
-platform = new Platform(200,290,900,20)
+platform = new Platform(400,290,1100,20)
 
 superman = new Superman(200,200,200,200)
 
-monster = new Monster(900,30,100,100)
+monster = new Monster(800,150,300)
+
+support = new Tile(1000,300,100,100)
 
 tile = new Tile(500,255,50,50)
 tile1 = new Tile(500,215,50,50)
@@ -41,7 +43,7 @@ launcherObj = new Launcher(superman.body,{x:150,y:100})
 }
 
 function draw(){
-background(225)
+background(bgImg)
 Engine.update(engine)
 
 superman.y = World.mouseY;
